@@ -1,0 +1,531 @@
+/* Global Styles */
+:root {
+  --primary-color: #8d8741;
+  --dark-color: #659dbd;
+  --light-color: #daad86;
+  --danger-color: #bc986a;
+  --success-color: #fbeec1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+/* Text Styles*/
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.large {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: #8d8741;
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
+/* Padding */
+.p {
+  padding: 0.5rem;
+}
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+.py {
+  padding: 0.5rem 0;
+}
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+
+/* Margin */
+.m {
+  margin: 0.5rem;
+}
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 2rem;
+}
+.m-3 {
+  margin: 3rem;
+}
+.my {
+  margin: 0.5rem 0;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 2rem 0;
+}
+.my-3 {
+  margin: 3rem 0;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--light-color);
+  color: #333;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+.viewlistbtn {
+  display: inline-block;
+  background: var(--light-color);
+  color: #dc3545;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 0.1rem;
+  text-align: center;
+  margin: 0.3rem;
+  background: var(--light-color);
+  color: #333;
+}
+
+.alert {
+  padding: 0.8rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: var(--light-color);
+  color: #333;
+}
+
+.btn-primary,
+.bg-primary,
+.badge-primary,
+.alert-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-light,
+.bg-light,
+.badge-light,
+.alert-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.btn-dark,
+.bg-dark,
+.badge-dark,
+.alert-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.btn-danger,
+.bg-danger,
+.badge-danger,
+.alert-danger {
+  background: red;
+  color: white;
+}
+
+.btn-success,
+.bg-success,
+.badge-success,
+.alert-success {
+  background: green;
+  color: white;
+}
+
+.btn-white,
+.bg-white,
+.badge-white,
+.alert-white {
+  background: #fff;
+  color: #333;
+  border: #ccc solid 1px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.bg-light,
+.badge-light {
+  border: #ccc solid 1px;
+}
+
+.round-img {
+  border-radius: 50%;
+}
+
+.line {
+  height: 1px;
+  background: #ccc;
+  margin: 1.5rem 0;
+}
+
+/* Overlay */
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Forms */
+.form .form-group {
+  margin: 1.2rem 0;
+}
+
+.form .form-text {
+  display: block;
+  margin-top: 0.3rem;
+  color: #888;
+}
+
+.form input[type='text'],
+.form input[type='email'],
+.form input[type='password'],
+.form input[type='date'],
+.form select,
+.form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
+.form input[type='submit'],
+button {
+  font: inherit;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.table th {
+  background: var(--light-color);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar a {
+  color: black;
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+}
+
+.navbar a:hover {
+  color: #8d8741;
+  border-bottom: 0.09rem solid #8d8741;
+}
+
+.navbar .welcome span {
+  margin-right: 0.6rem;
+}
+
+.navbar h1 {
+  font-size: 2rem;
+}
+/*Background*/
+.background {
+  position: relative;
+  background: url('./img//background.jpg') center center/cover;
+  height: '60rem';
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/*Join me*/
+.joinme-text {
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+}
+.joinme-image {
+  position: relative;
+  background: url('http://www.supremeteambling.com/wp-content/uploads/2017/02/Shop-Plunder-7-e1487630145623.png')
+    no-repeat left center/cover;
+  height: 20rem;
+}
+
+.tripdetails {
+  background: url('https://assets3.roadtrippers.com/uploads/poi_gallery_image/image/374853692/-quality_60_-interlace_Plane_-resize_640x360_U__-gravity_center_-extent_640x360/place_image-image-113a72da-5dc1-4846-b9cc-e489a577f69c.jpg')
+    no-repeat center center/cover;
+  height: 20rem;
+  width: 30rem;
+  margin-left: 15rem;
+}
+.tripdetails h2 {
+  float: right;
+}
+
+.joinme-form {
+  margin-top: 5rem;
+}
+
+.joinme-form h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Indie Flower', cursive;
+}
+
+.joinme-form h2 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: 'Indie Flower', cursive;
+}
+
+/* About Me*/
+.aboutme {
+  margin-left: 20rem;
+  margin-right: 25rem;
+  position: relative;
+  background: url('./img/aboutme.png') no-repeat center center/cover;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+}
+
+.aboutme-quote {
+  margin-top: 2rem;
+  margin-left: 10rem;
+  margin-bottom: 2rem;
+  font-family: 'Lobster', cursive;
+  color: #8d8741;
+}
+
+/* Landing Page */
+.landing {
+  position: relative;
+  background: url('https://dmn-dallas-news-prod.cdn.arcpublishing.com/resizer//Hp0h0oHaF4EywA6j-WLYbsYRneo=/1660x934/smart/filters:no_upscale()/arc-anglerfish-arc2-prod-dmn.s3.amazonaws.com/public/KZU2QZNYFRGLPHKR5X2AEU7CKY.jpg')
+    no-repeat center center/cover;
+  height: 55rem;
+  margin-bottom: 4rem;
+}
+
+.landing-bottom_left {
+  float: left;
+  position: relative;
+  background: url('./img/profile.jpg') no-repeat left center/cover;
+  height: 20rem;
+  width: 20rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+  border-radius: 50%;
+}
+
+.landing-bottom {
+  position: relative;
+  background: url('https://mcdaniel.hu/wp-content/uploads/2015/02/globe-map-suitcase-travel-1176x445.jpg')
+    no-repeat left center/cover;
+  height: 25rem;
+}
+
+.landing-bottom h2 {
+  margin-top: 7rem;
+  color: white;
+}
+
+.landing-inner {
+  color: #fff;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.landing-title {
+  font-family: 'Cinzel', serif;
+}
+
+.subtext {
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+}
+
+/* Posts Page */
+.post-form .post-form-header {
+  background: var(--primary-color);
+  padding: 0.5rem;
+}
+
+.post {
+  display: grid;
+  grid-template-rows: 0.3fr 4fr;
+  grid-gap: 2rem;
+  align-items: center;
+}
+
+.post > div:first-child {
+  text-align: center;
+}
+
+.post img {
+  width: 100px;
+}
+
+.post .comment-count {
+  background: var(--light-color);
+  color: var(--primary-color);
+  padding: 0.1rem 0.2rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.post .post-date {
+  color: #aaa;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 700px) {
+  .container {
+    margin-top: 8rem;
+  }
+
+  .hide-sm {
+    display: none;
+  }
+
+  /* Text Styles */
+  .xx-large {
+    font-size: 3rem;
+  }
+
+  .large {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  /* Navbar */
+  .navbar {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar ul {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .navbar h1 {
+    margin-bottom: 1rem;
+  }
+
+  .navbar .welcome {
+    display: none;
+  }
+
+  .post {
+    grid-template-columns: 1fr;
+  }
+  .post a,
+  .post button {
+    padding: 0.3rem 0.4rem;
+  }
+}
